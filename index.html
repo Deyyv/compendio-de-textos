@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Compendio de Tipos de Textos</title>
+
+    <!-- Hoja de estilos -->
+     <link rel="icon" href="img/logo.jpg">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =====================================================
+         ENCABEZADO Y NAVEGACIÓN
+    ====================================================== -->
+
+    <header>
+
+        <h1>Compendio de Tipos de Textos</h1>
+
+        <p>
+            Redacción técnica y profesional
+        </p>
+
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="instructivos.html">Instructivos</a>
+            <a href="normativos.html">Normativos</a>
+            <a href="prescriptivos.html">Prescriptivos</a>
+        </nav>
+
+    </header>
+
+
+    <!-- =====================================================
+         CONTENIDO PRINCIPAL
+    ====================================================== -->
+
+    <main>
+
+        <!-- ==================== PORTADA ==================== -->
+
+        <section id="inicio">
+
+            <h2>
+                Compendio de<br>
+                Tipos de Textos
+            </h2>
+
+            <p>
+                Una recopilación digital de textos instructivos,
+                normativos y prescriptivos aplicada al ámbito profesional.
+            </p>
+
+            <p>
+                <strong>Alumno:</strong> David Isaí Bo Vásquez
+            </p>
+
+            <p>
+                <strong>Carrera:</strong>
+                Perito en Desarrollo de Contenido Digital y Software
+            </p>
+
+            <p>
+                <p><strong>Fecha:</strong> <span id="fecha"></span></p>
+            </p>
+
+        </section>
+
+
+        <!-- ==================== INTRODUCCIÓN ==================== -->
+
+        <section id="introduccion">
+
+            <h2>Introducción</h2>
+
+            <p>
+                La redacción técnica y normativa es fundamental en el ámbito
+                profesional, ya que permite comunicar procedimientos,
+                establecer reglas y transmitir información de manera clara,
+                precisa y organizada. En áreas relacionadas con la tecnología
+                y el desarrollo de software, este tipo de textos facilita el
+                uso correcto de herramientas, equipos y sistemas, además de
+                establecer normas para su utilización. Por ello, conocer sus
+                características y aplicaciones permite mejorar la comunicación
+                profesional y reducir errores o confusiones.
+            </p>
+
+        </section>
+
+
+        <!-- ==================== ACCESO A SECCIONES ==================== -->
+
+        <section id="categorias">
+
+            <h2>Explora el compendio</h2>
+
+            <p>
+                Selecciona una categoría para conocer sus características
+                y ejemplos aplicados.
+            </p>
+
+
+            <div class="categorias">
+
+                <!-- Textos instructivos -->
+
+                <a href="instructivos.html" class="categoria">
+
+                    <span class="categoria-icono">🔧</span>
+
+                    <h3>Textos Instructivos</h3>
+
+                    <p>
+                        Guían al lector mediante pasos ordenados
+                        para realizar una actividad.
+                    </p>
+
+                    <span class="categoria-link">
+                        Explorar →
+                    </span>
+
+                </a>
+
+
+                <!-- Textos normativos -->
+
+                <a href="normativos.html" class="categoria">
+
+                    <span class="categoria-icono">📜</span>
+
+                    <h3>Textos Normativos</h3>
+
+                    <p>
+                        Establecen reglas, normas y disposiciones
+                        que deben cumplirse.
+                    </p>
+
+                    <span class="categoria-link">
+                        Explorar →
+                    </span>
+
+                </a>
+
+
+                <!-- Textos prescriptivos -->
+
+                <a href="prescriptivos.html" class="categoria">
+
+                    <span class="categoria-icono">⚠️</span>
+
+                    <h3>Textos Prescriptivos</h3>
+
+                    <p>
+                        Indican acciones o conductas que deben
+                        seguirse ante determinadas situaciones.
+                    </p>
+
+                    <span class="categoria-link">
+                        Explorar →
+                    </span>
+
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =====================================================
+         PIE DE PÁGINA
+    ====================================================== -->
+
+    <footer>
+
+        <p>
+            Compendio de Tipos de Textos
+        </p>
+
+        <p>
+            Perito en Desarrollo de Contenido Digital y Software
+        </p>
+
+        <a href="#inicio">
+            Volver al inicio ↑
+        </a>
+
+    </footer>
+
+
+</body>
+
+<script>
+    let ultimaPosicion = 0;
+
+    window.addEventListener("scroll", function () {
+
+        const header = document.querySelector("header");
+        const posicionActual = window.pageYOffset;
+
+        if (posicionActual > ultimaPosicion && posicionActual > 30) {
+
+            header.style.transform = "translateY(-100%)";
+
+        } else {
+
+            header.style.transform = "translateY(0)";
+
+        }
+
+        ultimaPosicion = posicionActual;
+    });
+
+     // Fecha actual
+    const fecha = new Date();
+
+    document.getElementById("fecha").textContent =
+        fecha.toLocaleDateString("es-GT", {
+            day: "numeric",
+            month: "long",
+            year: "numeric"
+        });
+</script>
+
+</html>
