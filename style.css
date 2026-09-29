@@ -668,6 +668,14 @@ img {
     margin: 20px auto;
 }
 
+.imagen-normativa {
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+}
+
 @media (max-width: 600px) {
     header {
         padding: 15px 5%;
